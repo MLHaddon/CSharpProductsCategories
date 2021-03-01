@@ -1,0 +1,12 @@
+<div class="d-flex flex-column">
+  <h2>Existing Products</h2>
+  <table class="table">
+      @foreach (Product product in ViewBag.Products)
+      {
+      <tr>
+        <td><a href="/Products/@product.ProductId">@product.Name</a></td>
+        <td><a href="/Products/@product.ProductId/Delete">Delete</a></td>
+      </tr>
+      }
+  </table>
+</div>

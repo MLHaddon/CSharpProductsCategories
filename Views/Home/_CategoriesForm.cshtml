@@ -1,0 +1,12 @@
+@model Category
+
+<div class="d-flex flex-column">
+  <h2>Add a new Category</h2>
+  <form action="/Categories/CreateCategory" method="post" class="d-flex flex-column justify-content-between">
+      <div class="rounded p-2 bg-info">
+        <input type="text" asp-for="Name" class="form-control">
+        <span class="text-danger" asp-validation-for="Name"></span>
+      </div>
+      <input type="Submit" class="btn btn-success" value="Create!">
+  </form>
+</div>

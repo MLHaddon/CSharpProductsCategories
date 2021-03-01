@@ -1,0 +1,18 @@
+@model Product
+
+<div class="d-flex flex-column">
+  <h2>Add a new Product</h2>
+  <form action="/Products/CreateProduct" method="post" class="d-flex flex-column justify-content-between">
+      <div class="rounded p-2 bg-info">
+        <input type="text" asp-for="Name" class="form-control">
+        <span class="text-danger" asp-validation-for="Name"></span>
+
+        <input type="text" asp-for="Desc" class="form-control">
+        <span class="text-danger" asp-validation-for="Desc"></span>
+
+        <input type="number" asp-for="Price" class="form-control">
+        <span class="text-danger" asp-validation-for="Price"></span>
+      </div>
+        <input type="Submit" class="btn btn-success" value="Create!">
+  </form>
+</div>

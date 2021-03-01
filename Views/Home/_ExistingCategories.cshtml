@@ -1,0 +1,12 @@
+<div class="d-flex flex-column">
+  <h2>Existing Categories</h2>
+  <table class="table">
+    @foreach (Category category in ViewBag.Categories)
+    {
+      <tr>
+        <td><a href="/Categories/@category.CategoryId">@category.Name</a></td>
+        <td><a href="/Categories/@category.CategoryId/Delete">Delete</a></td>
+      </tr>
+    }
+  </table>
+</div>
